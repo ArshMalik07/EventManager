@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background - Soft Gradient */
+body {
+  background: linear-gradient(90deg, #bbdefb, #bbdefb); /* Soft gradient */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Profile Card - Glassmorphism with Black Shadow */
+.profile-card {
+  width: 90vw;
+  max-width: 700px;
+  height: 700px; /* Set height of the container */
+  background: rgba(255, 255, 255, 0.2); /* Glass effect */
+  padding: 40px;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8), 
+              0px 0px 40px rgba(0, 0, 0, 0.5), 
+              0px 0px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden; /* Hide anything outside the container */
+}
+
+/* Hover Effect */
+.profile-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9), 
+              0px 0px 50px rgba(0, 0, 0, 0.6), 
+              0px 0px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* User Name */
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+/* User Info */
+p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Divider */
+.divider {
+  width: 80%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 20px auto;
+}
+
+/* Events List */
+h4 {
+  font-size: 1.4rem;
+  color: #1e88e5;
+  margin-bottom: 10px;
+}
+
+/* Add Scrollable Content for Events */
+.events-container {
+  max-height: 350px; /* Set a max-height for the events container */
+  overflow-y: auto; /* Enable scrolling if content exceeds max-height */
+  padding: 10px;
+  margin-bottom: 20px; /* Add space between events and other content */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px 0;
+  transition: background 0.3s ease-in-out;
+}
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+ul li a {
+  color: #0d47a1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Common Button */
+.button {
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 5px 12px rgba(30, 136, 229, 0.3);
+}
+
+/* Button Hover */
+.button:hover {
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
+  transform: scale(1.05);
+}
+
+/* Logout Button */
+.logout {
+  background: linear-gradient(135deg, #d32f2f, #f44336);
+}
+
+.logout:hover {
+  background: linear-gradient(135deg, #b71c1c, #d32f2f);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 95vw;
+    padding: 30px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}

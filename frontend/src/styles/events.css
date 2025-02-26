@@ -1,0 +1,155 @@
+/* General Styling */
+body {
+    font-family: '', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Search Form */
+  .search-form {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .search-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .search-form button, .search-form .button {
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  
+  .search-form button:hover, .search-form .button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Event Cards */
+  .event-card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .event-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .event-details {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .event-details div {
+    margin: 5px 0;
+  }
+  
+  /* Registration Button */
+  .register-button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .register-button:hover {
+    background: #218838;
+    transform: scale(1.05);
+  }
+  
+  .register-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

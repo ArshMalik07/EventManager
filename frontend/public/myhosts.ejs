@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hosted Events</title>
+    
+    <script>
+        function toggleInviteForm(eventId) {
+            const form = document.getElementById(`invite-form-${eventId}`);
+            form.style.display = form.style.display === "none" ? "block" : "none";
+        }
+    </script>
+    <link rel="stylesheet" href="../src/styles/myhosts.css">
+</head>
+<body>
+    <h1>Your Hosted Events</h1>
+    
+    <div class="events-container">
+        <% if (hostedEvents.length > 0) { %>
+            <% hostedEvents.forEach(event => { %>
+                <div class="event">
+                    <h2><%= event.name %></h2>
+                    
+                    
+                    <a href="/eventdetails/<%= event._id %>">View Event Details</a>
+                    <button onclick="toggleInviteForm('<%= event._id %>')">Invite</button>
+                    <div id="invite-form-<%= event._id %>" class="invite-form" style="display: none;">
+                        <form action="/events/<%= event._id %>/invite" method="POST">
+                            
+                            <input type="email" name="recipientEmail" placeholder="Email" required>
+
+                            <button type="submit">Send Invitation</button>
+                    
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>You haven't hosted any events yet.</p>
+        <% } %>
+
+    </div>
+    <br>
+    <div class="back-home">
+        <a href="/dashboard">Dashboard</a>
+    </div>
+</body>
+</html>

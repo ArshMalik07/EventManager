@@ -1,0 +1,16 @@
+<a href="/logout" class="button logout" id="logout-button">Logout</a>
+
+<script>
+  
+  document.getElementById('logout-button').addEventListener('click', function(event) {
+    event.preventDefault(); 
+
+
+    const userConfirmed = confirm('Are you sure you want to log out?');
+
+    
+    if (userConfirmed) {
+      window.location.href = '/logout'; 
+    }
+  });
+</script>

@@ -1,0 +1,173 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling with New Gradient */
+body {
+    background: linear-gradient(135deg, #061a3a, #0f3b57, #1e6b7b);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Back Home Button */
+.back-home a {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #12cad6;
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(18, 202, 214, 0.4);
+}
+
+.back-home a:hover {
+    background: #0ea3b3;
+    transform: scale(1.08);
+    box-shadow: 0px 4px 20px rgba(18, 202, 214, 0.6);
+}
+
+/* Events Container */
+.events-container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Event Cards */
+.event {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.event:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 25px rgba(0, 255, 255, 0.4);
+}
+
+/* Event Heading */
+.event h2 {
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+    color: #12cad6;
+}
+
+/* Event Links & Buttons */
+.event a, .event button {
+    display: inline-block;
+    margin: 12px 6px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* View Event Details */
+.event a {
+    background: #12cad6;
+    color: black;
+    box-shadow: 0px 4px 12px rgba(18, 202, 214, 0.4);
+}
+
+.event a:hover {
+    background: #0ea3b3;
+    transform: scale(1.08);
+    box-shadow: 0px 4px 18px rgba(18, 202, 214, 0.6);
+}
+
+/* Invite Button */
+.event button {
+    background: #4EF037;
+    color: black;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(78, 240, 55, 0.4);
+}
+
+.event button:hover {
+    background: #3dc329;
+    transform: scale(1.08);
+    box-shadow: 0px 4px 18px rgba(78, 240, 55, 0.6);
+}
+
+/* Invite Form */
+.invite-form {
+    margin-top: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 2px 12px rgba(0, 255, 255, 0.2);
+}
+
+/* Input Field */
+.invite-form input {
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+/* Send Invite Button */
+.invite-form button {
+    background: #FFD700;
+    color: black;
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.invite-form button:hover {
+    background: #E6C200;
+    box-shadow: 0px 4px 18px rgba(255, 215, 0, 0.6);
+}
+
+/* No Events Message */
+p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #12cad6;
+    margin-top: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .events-container {
+        padding: 20px;
+    }
+
+    .event h2 {
+        font-size: 1.6rem;
+    }
+
+    .event a, .event button {
+        font-size: 0.9rem;
+    }
+}

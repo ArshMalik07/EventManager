@@ -1,0 +1,97 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6d);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #fbc531, #ff9f1a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(255, 165, 0, 0.5);
+}
+
+/* Event Details Container */
+.event-details {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.1); /* Glass Effect */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.4);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    text-align: left;
+}
+
+/* Event Image */
+.event-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 3px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-image:hover {
+    transform: scale(1.03);
+}
+
+/* Event Details */
+.event-details p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    margin-bottom: 10px;
+}
+
+.event-details strong {
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-details {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .event-details p {
+        font-size: 1rem;
+    }
+}

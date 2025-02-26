@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management Dashboard</title>
+  <link rel="stylesheet" href="../src/styles/home.css">
+  
+</head>
+<body>
+
+  <header>
+    Event Management Application
+  </header>
+
+  <div class="main-content">
+    <center><h1>Welcome to Event Management System</h1></center>
+    <p>Manage and create events effortlessly with our intuitive platform. Start by logging in or registering below.</p>
+
+    <div class="card">
+      <h3>Getting Started</h3>
+      <p>Get started by logging in to manage events, track upcoming activities, or create new events. If you're new, simply register to get started!</p>
+      <button onclick="window.location.href='/login'">Login</button>
+      <button onclick="window.location.href='/register'">Register</button>
+    </div>
+
+    <div class="card countdown">
+      <h3>Upcoming Event Countdown</h3>
+      <p>Don't miss out! The next big event is just <span id="countdown-timer">10:00:00</span> away!</p>
+    </div>
+
+<div class="card testimonial">
+  <h3>What Users Are Saying</h3>
+  <p>"This platform made managing my events so easy and efficient. I highly recommend it!" - Jane Smith</p>
+  <p>"An incredible experience. The tools and features available are top-notch!" - John Doe</p>
+  <p>"A game changer for event planning! The user interface is intuitive, and I can organize everything in one place." - Emily Brown</p>
+  <p>"The analytics feature helped me improve my events by tracking attendee data and feedback. Fantastic!" - Michael Lee</p>
+  <p>"I was able to create a virtual event in no time! The process is simple, and customer support is excellent." - Sarah Johnson</p>
+</div>
+
+<div class="card">
+  <h3>Why Choose Our Application?</h3>
+  <p>We understand how challenging event management can be. Here's why our platform stands out:</p>
+  <ul style="text-align: left; list-style-type: square; margin-left: 40px; line-height: 1.6; color: #bdc3c7;">
+    <li><strong>Intuitive Interface:</strong> Manage your events with a user-friendly dashboard designed for simplicity and efficiency.</li>
+    <li><strong>Comprehensive Tools:</strong> From creating events to tracking performance and analytics, we offer all-in-one solutions.</li>
+    <li><strong>Customization:</strong> Customize your events to match your vision and goals effortlessly.</li>
+    <li><strong>Real-Time Updates:</strong> Stay informed with live updates, countdown timers, and calendar integrations.</li>
+    <li><strong>Scalability:</strong> Whether hosting a small gathering or a large-scale conference, our platform adapts to your needs.</li>
+    <li><strong>Support:</strong> Our dedicated support team is here to assist you at every step.</li>
+  </ul>
+</div>
+<div class="card">
+  <h3>Frequently Asked Questions (FAQs)</h3>
+  <div style="text-align: left; line-height: 1.6; color: #bdc3c7;">
+    <p><strong>Q:</strong> Can I create recurring events?</p>
+    <p><strong>A:</strong> Yes, our platform supports recurring events. You can configure them during event creation.</p>
+
+    <p><strong>Q:</strong> How can I track attendance?</p>
+    <p><strong>A:</strong> Our analytics tool provides real-time attendance data and detailed reports.</p>
+
+    <p><strong>Q:</strong> Is the platform mobile-friendly?</p>
+    <p><strong>A:</strong> Absolutely! Our platform is fully responsive and works seamlessly on all devices.</p>
+
+  </div>
+</div>
+
+<div class="card">
+  <h3>Quick Start Guide</h3>
+  <ol style="text-align: left; line-height: 1.6; margin-left: 40px; color: #bdc3c7;">
+    <li><strong>Step 1:</strong> Register for an account.</li>
+    <li><strong>Step 2:</strong> Navigate to the "Create New Event" page.</li>
+    <li><strong>Step 3:</strong> Fill in event details and customize settings.</li>
+    <li><strong>Step 4:</strong> Share the event link with your audience.</li>
+    <li><strong>Step 5:</strong> Track performance with our analytics tools.</li>
+  </ol>
+</div>
+
+ 
+    <div class="social-links">
+      <a href="">Facebook</a>
+      <a href="">Twitter</a>
+      <a href="">Instagram</a>
+    </div>
+
+    <div class="features-section">
+      <div class="feature-card">
+        <h4>Create Events</h4>
+        <p>Organize and schedule your events with ease. Our platform allows you to create and customize events tailored to your needs.</p>
+      </div>
+
+      <div class="feature-card">
+        <h4>Event Analytics</h4>
+        <p>Track event performance, view attendee data, and gather valuable insights to make data-driven decisions for your next event.</p>
+      </div>
+
+      <div class="feature-card">
+        <h4>Event Categories</h4>
+        <p>Explore events by categories such as workshops, conferences, concerts, and more. Filter and find events that suit your interests.</p>
+      </div>
+    </div>
+
+    <div class="card event-calendar">
+      <h3>Event Calendar</h3>
+      <div class="calendar-box">
+        <p>View all upcoming events on the calendar</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Event Management Application. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    const countdownElement = document.getElementById('countdown-timer');
+    let countdown = 36000; 
+    function updateCountdown() {
+      const hours = Math.floor(countdown / 3600);
+      const minutes = Math.floor((countdown % 3600) / 60);
+      const seconds = countdown % 60;
+      countdownElement.innerText = `${hours}:${minutes}:${seconds}`;
+      countdown--;
+      if (countdown < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerText = 'Event Started';
+      }
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>

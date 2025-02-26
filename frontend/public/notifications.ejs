@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="../src/styles/notifications.css">
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>Your Notifications</h1>
+
+    <% if (notifications.length === 0) { %>
+      <p class="no-notifications">No Notifications</p>
+    <% } else { %>
+      <ul>
+        <% notifications.forEach(notification => { %>
+          <li>
+            <p><strong><%= notification.message %></strong></p>
+            <% if (notification.event) { %>
+              <p class="event-name">Event: <%= notification.event.name %></p>
+              <p class="event-date">Date: <%= new Date(notification.event.date).toDateString() %></p>
+              <form action="/register-event/<%= notification.event._id %>" method="POST">
+                <button class="register-button" type="submit">Register</button>
+              </form>
+            <% } else { %>
+              <p class="event-name">Event details not available</p>
+            <% } %>
+            
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+  </div>
+  <div class="dashboard"><a href="/dashboard">Dashboard</a></div>
+  
+</body>
+</html>

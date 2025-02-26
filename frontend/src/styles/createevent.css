@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #000000, #000000); /* Black to Deep Blue */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffd700; /* Gold */
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Blue Glow on Container */
+.container:hover {
+  box-shadow: 0 0 20px 5px rgba(0, 150, 255, 0.7); /* Blue light glow effect */
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #ffd700; /* Gold */
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ffd700; /* Gold */
+  background-color: #333; /* Dark background */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ffd700; /* Gold */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #ff7e5f; /* Gold */
+  color: #003366; /* Deep Blue */
+  padding: 12px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: auto; /* Button width based on content */
+  transition: all 0.3s ease;
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto; /* Center align the button horizontally */
+}
+
+button:hover {
+  background-color: #ff7e5f; /* Light Orange */
+  transform: scale(1.05);
+}
+
+
+.back-button {
+  display: block; /* Make it a block-level element */
+  text-align: center;
+  padding: 8px 16px; /* Reduced padding for smaller button */
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  background-color: #003366; /* Deep Blue */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  width: auto; /* Allow button width to be based on text */
+  max-width: 200px; /* Set maximum width for button */
+  margin-left: auto;
+  margin-right: auto; /* Center align */
+  font-size: 1rem; /* Smaller font size */
+}
+
+.back-button:hover {
+  background-color: #ffd700; /* Gold */
+}
+
+
+input[type="file"] {
+  background: #333;
+}
+
+input[type="datetime-local"]::-webkit-datetime-edit {
+  color: white;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+  
+  header {
+    font-size: 2rem;
+  }
+  
+  button {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,196 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Glassmorphism Register Container */
+.register-container {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+}
+
+.form-group input[type="password"] {
+  padding-right: 40px;
+}
+
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #bbb;
+  user-select: none;
+  z-index: 2;
+}
+
+
+.password-toggle:hover {
+  color: #00d4ff;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff9900, #ff6600);
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 204, 0, 0.8);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+/* Form Links Styling */
+.form-links {
+  margin-top: 1.5rem;
+}
+
+.form-links p {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.form-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.form-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 2rem;
+    max-width: 85%;
+  }
+
+  .form-group input {
+    padding: 0.6rem;
+  }
+
+  button {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  .form-links p {
+    font-size: 0.9rem;
+  }
+}

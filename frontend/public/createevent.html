@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Event</title>
+  <link rel="stylesheet" href="../src/styles/createevent.css">
+
+  
+  
+</head>
+<body>
+  <header>
+    Create New Event
+  </header>
+
+  <div class="container">
+    <form action="/createevent" method="POST" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="hostname">Host Name</label>
+        <input type="text" id="hostname" name="hostname" required placeholder="Enter Host name">
+      </div>
+
+      <div class="form-group">
+        <label for="event-name">Event Name</label>
+        <input type="text" id="event-name" name="eventName" required placeholder="Enter event name">
+      </div>
+
+      <div class="form-group">
+        <label for="event-description">Event Description</label>
+        <textarea id="event-description" name="eventDescription" rows="5" required placeholder="Enter event description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="event-datetime">Event Date and Time</label>
+        <input type="datetime-local" id="event-datetime" name="eventDateTime" required>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="event-location">Event Location</label>
+        <input type="text" id="event-location" name="eventLocation" required placeholder="Enter event location">
+      </div>
+
+      <div class="form-group">
+        <label for="event-capacity">Event Capacity</label>
+        <input type="number" id="event-capacity" name="eventCapacity" required placeholder="Enter Capacity" min="1">
+      </div>
+
+      <div class="form-group">
+        <label for="event-category">Event Category</label>
+        <select id="event-category" name="eventCategory" required>
+          <option value="General">General</option>
+          <option value="workshop">Workshop</option>
+          <option value="conference">Conference</option>
+          <option value="concert">Concert</option>
+          <option value="webinar">Webinar</option>
+          <option value="friends-meetup">Friends Meetup</option>
+          <option value="seminar">Seminar</option>
+          <option value="networking-event">Networking Event</option>
+          <option value="trade-show">Trade Show</option>
+          <option value="hackathon">Hackathon</option>
+          <option value="exhibition">Exhibition</option>
+          <option value="fundraiser">Fundraiser</option>
+          <option value="sports-event">Sports Event</option>
+          <option value="competition">Competition</option>
+          <option value="festival">Festival</option>
+          <option value="celebration">Celebration</option>
+          <option value="panel-discussion">Panel Discussion</option>
+          <option value="training-session">Training Session</option>
+          <option value="product-launch">Product Launch</option>
+          <option value="charity-event">Charity Event</option>
+          <option value="movie-screening">Movie Screening</option>
+        </select>
+      </div>
+
+
+    
+
+      <div class="form-group">
+        <button type="submit">Create Event</button>
+      </div>
+    </form>
+
+    <a href="/dashboard" class="back-button">Back to Dashboard</a>
+  </div>
+</body>
+</html>

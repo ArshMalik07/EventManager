@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Backup files
+backup.js
+fullbackup.js
+
+# Other backup files
+*.bak
+*.tmp

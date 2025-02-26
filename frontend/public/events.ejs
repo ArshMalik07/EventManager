@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events</title>
+  <link rel="stylesheet" href="../src/styles/events.css">
+  
+</head>
+<body>
+  <header>
+    Upcoming Events
+  </header>
+
+  <div class="container">
+    <div class="search-form">
+      <form action="/events" method="GET">
+        <input type="text" name="eventName" placeholder="Search events by name" required />
+        <button type="submit">Search</button>
+        <a href="/dashboard" class="button">Dashboard</a>
+      </form>
+    </div>
+
+    <% if (events.length > 0) { %>
+      <% events.forEach(event => { %>
+        <div class="event-card">
+          <h3><%= event.name %></h3>
+          <p><%= event.description %></p>
+
+          <div class="event-details">
+            <div class="date">Date: <%= new Date(event.date).toLocaleDateString() %></div>
+            <div class="category">Category: <a href="/events?category=<%= event.category %>"><%= event.category %></a></div>
+            <div>Location: <%= event.location %></div>
+            <div>Host: <%= event.hostname %></div> 
+            <div>Remaining Capacity: <%= event.capacity - event.attendees.length %> seats available</div>
+          </div>
+
+
+          <% if (event.capacity - event.attendees.length > 0) { %>
+            <form action="/register-event" method="POST">
+              <input type="hidden" name="eventId" value="<%= event._id %>">
+              <button type="submit" class="register-button">Register</button>
+              <a href="/eventdetail/<%= event._id %>">View Event Details</a>
+            </form>
+          <% } else { %>
+            <button class="register-button" disabled>Event Full</button>
+          <% } %>
+
+        </div>
+      <% }) %>
+    <% } else { %>
+
+      <p>No upcoming events available at the moment.</p>
+    <% } %>
+  </div>
+</body>
+</html>

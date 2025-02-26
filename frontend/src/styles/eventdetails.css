@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6d);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #fbc531, #ff9f1a);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+/* Event Details Container */
+.event-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.4);
+    max-width: 800px;
+    width: 90%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Event Image */
+.event-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+/* Event Information */
+.event-details p {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+strong {
+    color: #ffcc00;
+}
+
+/* Attendees Section */
+.attendees {
+    margin-top: 20px;
+}
+
+.attendees h2 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Attendees List */
+.attendees ul {
+    list-style: none;
+    padding: 0;
+}
+
+.attendees li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 1rem;
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-details {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .event-details p {
+        font-size: 1rem;
+    }
+
+    .attendees h2 {
+        font-size: 1.3rem;
+    }
+}

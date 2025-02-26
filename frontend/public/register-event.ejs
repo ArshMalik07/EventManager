@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register for Event</title>
+  
+</head>
+<body>
+  <header>
+    Register for Event
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h3>Choose an Event to Register</h3>
+      <div class="event-list">
+        <% events.forEach(function(event) { %>
+          <div class="event-item">
+            <p><strong><%= event.name %></strong></p>
+            <p>Date: <%= event.date %></p>
+            <p>Capacity: <%= event.capacity %> | Registered: <%= event.attendees.length %></p>
+            <% if (event.capacity > event.attendees.length) { %>
+              <form action="/register-event/<%= event._id %>" method="POST">
+                <button class="register-button" type="submit">Register</button>
+            </form>
+            
+                  
+            <% } else { %>
+              <button class="register-button" disabled>Full</button>
+            <% } %>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

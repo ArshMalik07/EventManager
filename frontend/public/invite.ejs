@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invite</title>
+</head>
+<body>
+  <h1>Invite Someone to an Event</h1>
+  <form action="/invite" method="POST">
+    <label for="recipient">Enter Email or Username:</label>
+    <input type="text" name="recipient" id="recipient" required>
+    
+    <label for="eventId">Select Event:</label>
+    <select name="eventId" id="eventId" required>
+      <% events.forEach(event => { %>
+        <option value="<%= event._id %>"><%= event.name %></option>
+      <% }) %>
+    </select>
+    
+    <button type="submit">Send Invite</button>
+  </form>
+</body>
+</html>

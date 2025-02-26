@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= event.name %> - Event Details</title>
+    <link rel="stylesheet" href="../src/styles/eventdetails.css">
+
+    
+</head>
+<body>
+    <header>
+        <h1><%= event.name %></h1>
+    </header>
+    
+    <div class="event-details">
+        <% if (event.image) { %>
+            <img src="<%= event.image %>" alt="<%= event.name %> Image" class="event-image">
+        <% } %>
+        <p><strong>Description:</strong> <%= event.description %></p>
+        <p><strong>Date:</strong> <%= new Date(event.date).toLocaleString() %></p>
+        <p><strong>Location:</strong> <%= event.location %></p>
+        <p><strong>Category:</strong> <%= event.category %></p>
+<p><strong>Hosted by:</strong> <%= event.hostname %></p>
+
+        <p><strong>Attendees:</strong> <%= event.attendees.length %> out of <%= event.capacity %></p>
+        
+        <div class="attendees">
+            <h2>Attendees:</h2>
+            <ul>
+                <% event.attendees.forEach(attendee => { %>
+                    <li><%= attendee.name %></li>
+                <% }); %>
+            </ul>
+        </div>
+        
+       
+    </div>
+        <p>&copy; 2025 Event Platform. All rights reserved.</p>
+    </footer>
+</body>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= user.name %>'s Profile | Event Manager</title>
+  <link rel="stylesheet" href="../src/styles/profile.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="profile-card">
+      
+      <h3>User Profile</h3>
+      
+      <div class="user-info">
+        <p><strong>Username:</strong> <%= user.username %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+      </div>
+
+      <div class="events-container">
+
+        <div class="events-column hosted-events">
+          <h4>Hosted Events</h4>
+          <% if (user.hosted_events.length > 0) { %>
+            <ul>
+              <% user.hosted_events.forEach(event => { %>
+                <li>
+                  <a href="/eventdetails/<%= event.id %>"><%= event.name %></a> 
+                  - <span><%= event.date %></span>
+                </li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <p>No events hosted yet.</p>
+          <% } %>
+        </div>
+
+        <div class="events-column participated-events">
+          <h4>Participated Events</h4>
+          <% if (user.participated_events.length > 0) { %>
+            <ul>
+              <% user.participated_events.forEach(event => { %>
+                <li>
+                  <a href="/eventdetail/<%= event.id %>"><%= event.name %></a> 
+                  - <span><%= event.date %></span>
+                </li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <p>No events participated in yet.</p>
+          <% } %>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="action-buttons">
+      <a href="/editprofile" class="button">Edit Profile</a>
+      <a href="/dashboard" class="button">Dashboard</a>
+      <a href="/logout" class="button logout">Logout</a>
+    </div>
+  </div>
+
+</body>
+</html>

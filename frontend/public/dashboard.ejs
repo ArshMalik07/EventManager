@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management Dashboard</title>
+  <link rel="stylesheet" href="../src/styles/dashboard.css">
+  
+  
+</head>
+<body>
+  <header>
+    Event Management Dashboard
+  </header>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <a href="/">Home</a>
+      <a href="/events">Events</a>
+      <a href="/createevent">Create Event</a> 
+      <a href="/profile">Profile</a>
+      <a href="/myhosts">My Hosts</a>
+      <a href="/myregisters">My registers</a>
+      <a href="/notifications">Notifications</a>
+      <a href="/logout">Logout</a>
+    </div>
+
+
+    <div class="main-content">
+      
+      <div class="card">
+        <h3>Admin: <strong><%= user.name %></strong></h3>
+      </div>
+
+      <div class="card">
+        <h3>Want to look on your next events?</h3>
+        <button onclick="window.location.href='/events'">View All Events</button>
+      </div>
+
+      <div class="card">
+        <h3>Create New Event</h3>
+        <button onclick="window.location.href='/createevent'">Go to Create Event</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="logout-link">
+    <a href="/logout">Logout</a>
+  </div>
+</body>
+</html>

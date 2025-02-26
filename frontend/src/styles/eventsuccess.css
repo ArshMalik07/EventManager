@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+    background-size: contain; /* Ensures the background image fits the container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Ensures no tiling */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px; /* Adjusted padding for better spacing */
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #28a745; /* Green color for success messages */
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    width: auto; /* Set to auto to adjust width based on content */
+    padding: 8px 16px; /* Reduced padding for a smaller button */
+    font-size: 1em; /* Adjust font size */
+}
+
+a:hover {
+    background-color: #218838;
+}
+
+button {
+    background-color: #28a745; /* Green button color for success */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: auto; /* Set to auto to adjust width based on content */
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em; /* Adjust font size */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Added styles for image resizing */
+.success-logo {
+    max-width: 100%; /* Ensures the image will never exceed its container width */
+    height: auto; /* Maintains aspect ratio */
+    width: 150px; /* Adjust this value to change the size of the image */
+    margin-bottom: 20px; /* Adds spacing below the image */
+}

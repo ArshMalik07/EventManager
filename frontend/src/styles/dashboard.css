@@ -1,0 +1,168 @@
+    /* Body */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2C2F36; /* Dark background */
+    }
+  
+    /* Header */
+    header {
+      background-color: #1A1D23; /* Deep charcoal */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Strong header shadow */
+      transition: all 0.3s ease;
+    }
+  
+    header:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Shadow increase on hover */
+    }
+  
+    /* Container */
+    .container {
+      display: flex;
+    }
+  
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #1E2228;
+      padding-top: 20px;
+      position: fixed;
+      height: 100%;
+      color: #B0B7C3;
+      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+  
+    .sidebar a {
+      text-decoration: none;
+      color: #B0B7C3;
+      display: block;
+      padding: 18px;
+      border-bottom: 1px solid #2C3E50;
+      font-size: 18px;
+      transition: background-color 0.3s ease, padding-left 0.3s ease;
+    }
+  
+    .sidebar a:hover {
+      background-color: #4A90E2;
+      color: white;
+      padding-left: 25px; /* Adds effect of expanding link on hover */
+    }
+  
+    /* Main Content */
+    .main-content {
+      margin-left: 250px;
+      padding: 30px;
+      width: calc(100% - 250px);
+      background-color: #292E36;
+      border-radius: 10px;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+  
+    .main-content:hover {
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3); /* Stronger shadow when hovering */
+    }
+  
+    /* Card Styles */
+    .card {
+      background-color: #3E434C;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: 12px;
+      transition: all 0.4s ease;
+    }
+  
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+      transform: translateY(-5px); /* Card lifts up on hover */
+    }
+  
+    .card h3 {
+      font-size: 22px;
+      margin-top: 0;
+      color: #E2E6EB;
+    }
+  
+    .card button {
+      background-color: #4A90E2;
+      color: white;
+      padding: 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .card button:hover {
+      background-color: #357ABD;
+      transform: translateY(-2px); /* Button lifts slightly */
+    }
+  
+    /* Logout Link */
+    .logout-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+  
+    .logout-link a {
+      color: #E2E6EB;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .logout-link a:hover {
+      color: #4A90E2;
+      transform: translateY(-2px); /* Logout link lifts slightly */
+    }
+  
+    /* Search Bar */
+    .search-bar {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .search-bar input {
+      padding: 12px;
+      width: 75%;
+      border-radius: 8px;
+      border: 1px solid #4A90E2;
+      background-color: #383C43;
+      color: white;
+      transition: all 0.3s ease;
+    }
+  
+    .search-bar input:focus {
+      border-color: #1ABC9C; /* Light green focus effect */
+      outline: none;
+      transform: scale(1.02); /* Slightly enlarge input on focus */
+    }
+  
+    .search-bar button {
+      padding: 12px;
+      background-color: #4A90E2;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .search-bar button:hover {
+      background-color: #357ABD;
+      transform: translateY(-2px); /* Button lifts slightly */
+    }
+  
